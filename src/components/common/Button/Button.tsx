@@ -3,28 +3,33 @@ import styled from "styled-components";
 
 interface Props {
   title: string;
+  link?: string;
+  alt?: boolean;
 }
 
-const StyledButton = styled.a`
+const StyledButton = styled.a<{ alt?: boolean }>`
   display: flex;
   align-items: center;
   height: 22px;
-  width: 150px;
-  background-color: #e9160f;
+  width: fit-content;
+  background-color: ${(props) =>
+    props.alt ? "#00000063" : "var(--color-hover)"};
   color: white;
   padding: 18px;
-  margin-left: 15px;
-  font-size: 22px;
+  margin: 0 20px;
+  font-size: 21px;
   font-weight: 700;
   text-decoration: none;
+  text-transform: capitalize;
   text-align: center;
+  white-space: nowrap;
   border: none;
   border-radius: 8px;
   transition: all 0.25s linear;
 
   &:hover {
     transform: scale(1.05);
-    background-color: #910d08;
+    background-color: ${(props) => (props.alt ? "#0000008f" : "#910d08")};
     cursor: pointer;
   }
 `;
@@ -32,16 +37,13 @@ const StyledButton = styled.a`
 const StyledAngle = styled.svg`
   height: 30px;
   width: 30px;
-  margin-left: auto;
+  margin-left: 10px;
   fill: white;
 `;
 
-const Button = ({ title }: Props) => {
+const Button = ({ title, alt, link }: Props) => {
   return (
-    <StyledButton
-      href="https://diamondpearl.pokemon.com/en-us/"
-      rel="noreferrer"
-    >
+    <StyledButton href={link} rel="noreferrer" alt={alt}>
       {title}{" "}
       <StyledAngle
         aria-hidden="true"

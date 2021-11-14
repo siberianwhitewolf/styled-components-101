@@ -23,7 +23,7 @@ const StyledX = styled.svg`
   opacity: 0.5;
 
   &:hover {
-    fill: #ec1b13;
+    fill: var(--color-hover);
     cursor: pointer;
     opacity: 1;
   }

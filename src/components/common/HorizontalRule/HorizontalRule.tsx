@@ -9,7 +9,7 @@ const StyledContainer = styled.div`
 
 const StyledHorizontalRule = styled.hr`
   height: 1px;
-  width: 70%;
+  width: 80%;
   margin: 35px 0;
   background-color: #d9dada;
   border: none;

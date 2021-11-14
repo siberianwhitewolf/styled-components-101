@@ -3,7 +3,7 @@ import ratingE from "../../../assets/images/en-e.svg";
 
 const StyledAgeRatingWrapper = styled.div`
   display: flex;
-  margin-left: 32px;
+  margin-left: 15px;
   width: 220px;
 `;
 

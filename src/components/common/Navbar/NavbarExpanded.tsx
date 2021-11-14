@@ -131,15 +131,16 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledBackdrop = styled.div`
+const StyledBackdrop = styled.div<{ active: boolean }>`
   position: absolute;
-  top: 315px;
+  top: ${(props) => (props.active ? "315px" : "0")};
   left: 0;
-  height: calc(100vh - 315px);
+  height: ${(props) => (props.active ? "calc(100vh - 315px)" : "100vh")};
   width: 100vw;
   background-color: black;
-  opacity: 0.8;
+  opacity: ${(props) => (props.active ? 0.8 : 0)};
   z-index: 1;
+  transition: all 0.3s linear;
 `;
 
 interface Props {
@@ -161,7 +162,7 @@ const NavbarExpanded = ({ active }: Props) => {
 
   return (
     <StyledExpandedContainer active={active}>
-      {active && <StyledBackdrop />}
+      <StyledBackdrop active={active} />
       <StyledContentWrapper active={showContent}>
         <StyledSuggestionsContainer>
           <StyledTextTitle>Suggestions</StyledTextTitle>

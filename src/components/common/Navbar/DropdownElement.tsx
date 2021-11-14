@@ -30,9 +30,10 @@ const StyledDropdownItem = styled.div`
   border: #dadadace 1px solid;
   padding: 0 40px;
   border-radius: 8px;
+  transition: all 0.1s ease-in-out;
 
   &:hover {
-    background-color: #f51f18;
+    background-color: var(--color-hover);
     cursor: pointer;
   }
 `;

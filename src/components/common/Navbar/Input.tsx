@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledInputWrapper = styled.div`
+const StyledInputWrapper = styled.div<{
+  active: boolean;
+}>`
   display: flex;
   align-items: center;
   margin-left: 30px;
   position: relative;
+  fill: ${(props) => props.active && "var(--color-hover)"};
   height: 100%;
   z-index: 3;
 
@@ -30,6 +33,8 @@ const StyledSearchInput = styled.input<{
   border-bottom: 1px solid var(--color-text);
   padding-bottom: 3px;
   padding-left: 25px;
+  color: ${(props) => props.active && "var(--color-hover)"};
+  border-color: ${(props) => props.active && "var(--color-hover)"};
   outline: transparent;
   transition: all 0.15s linear;
 
@@ -43,7 +48,7 @@ const StyledSearchInput = styled.input<{
   &:hover {
     color: var(--color-text);
     border-color: var(--color-primary);
-    cursor: ${(props) => props.active && "text"};
+    cursor: ${(props) => (props.active ? "text" : "pointer")};
 
     ::placeholder {
       color: ${(props) =>
@@ -72,7 +77,7 @@ const StyledX = styled.svg<{
   fill: ${(props) => props.active && "black;"};
 
   &:hover {
-    fill: #ec1b13;
+    fill: var(--color-hover);
     cursor: pointer;
     opacity: 1;
   }
@@ -86,7 +91,7 @@ interface Props {
 const Input = ({ setActive, active }: Props) => {
   return (
     <StyledWrapper>
-      <StyledInputWrapper onClick={() => setActive(true)}>
+      <StyledInputWrapper active={active} onClick={() => setActive(true)}>
         <StyledSearchIcon
           aria-hidden="true"
           focusable="false"
