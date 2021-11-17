@@ -16,7 +16,7 @@ const StyledButton = styled.a<{ alt?: boolean }>`
     props.alt ? "#00000063" : "var(--color-hover)"};
   color: white;
   padding: 18px;
-  margin: 0 20px;
+  margin: 30px 20px;
   font-size: 21px;
   font-weight: 700;
   text-decoration: none;

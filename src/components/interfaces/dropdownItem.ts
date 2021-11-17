@@ -5,3 +5,15 @@ export interface Item {
     alt: string;
   };
 }
+
+export interface ICarouselElement {
+  img: {
+    src: string;
+    alt: string;
+  };
+  title: string;
+  systemText?: string;
+  href: string;
+  price?: string;
+  heart?: boolean;
+}
