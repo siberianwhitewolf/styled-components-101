@@ -55,6 +55,30 @@ const StyledSearchInput = styled.input<{
         props.active ? "var(--color-text)" : "var(--color-primary)"};
     }
   }
+
+  @media only screen and (max-width: 950px) {
+    width: 300px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    width: 200px;
+  }
+
+  @media only screen and (max-width: 760px) {
+    width: 150px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 100px;
+  }
+
+  @media only screen and (max-width: 670px) {
+    width: 45px;
+  }
+
+  @media only screen and (max-width: 435px) {
+    width: 30px;
+  }
 `;
 
 const StyledSearchIcon = styled.svg`
@@ -63,6 +87,16 @@ const StyledSearchIcon = styled.svg`
   left: 0px;
   height: 18px;
   width: 18px;
+
+  @media only screen and (max-width: 670px) {
+    height: 14px;
+    width: 14px;
+  }
+
+  @media only screen and (max-width: 435px) {
+    height: 8px;
+    width: 8px;
+  }
 `;
 
 const StyledX = styled.svg<{

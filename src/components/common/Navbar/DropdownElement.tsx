@@ -42,6 +42,12 @@ const StyledItemImage = styled.img`
   height: 45px;
   width: fit-content;
   object-fit: contain;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--color-primary);
+    fill: var(--color-primary);
+  }
 `;
 
 const StyledItemText = styled.p`

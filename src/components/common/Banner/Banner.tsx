@@ -21,6 +21,11 @@ const StyledBanner = styled.div<{ bannerBackgroundImage: string }>`
   width: 80%;
   background-image: url("${(props) => props.bannerBackgroundImage}");
   object-fit: cover;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    height: 450px;
+  }
 `;
 
 const StyledBannerImage = styled.img`
@@ -28,6 +33,19 @@ const StyledBannerImage = styled.img`
   width: 350px;
   margin: 15px;
   object-fit: cover;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 300px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 250px;
+  }
 `;
 
 const StyledBannerText = styled.p`
@@ -40,6 +58,10 @@ const StyledBannerText = styled.p`
   color: white;
   margin: 0 20px;
   line-height: 40px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 interface Props {

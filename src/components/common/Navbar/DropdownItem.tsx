@@ -8,6 +8,7 @@ interface Props {
     src: string;
     alt: string;
   };
+
   dropdown?: boolean;
   href?: string;
   setDropdownItems?: (items?: Item[]) => void;
@@ -27,6 +28,26 @@ const StyledWrapper = styled.li`
   color: var(--color-text);
   margin-right: 20px;
   transition: all 0.15s linear;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: 520px) {
+    font-size: 10px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    font-size: 8px;
+  }
+
+  @media only screen and (max-width: 380px) {
+    font-size: 5px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 4px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -52,6 +73,15 @@ const StyledSVG = styled.svg<{ active?: boolean }>`
   margin-left: 4px;
   opacity: 0.7;
   transform: ${(props) => props.active && "rotate(180deg)"};
+
+  @media only screen and (max-width: 800px) {
+    height: 14px;
+    width: 14px;
+  }
+  @media only screen and (max-width: 520px) {
+    height: 10px;
+    width: 10px;
+  }
 `;
 
 const StyledIcon = styled.img<{ active?: boolean }>`
@@ -63,6 +93,22 @@ const StyledIcon = styled.img<{ active?: boolean }>`
   margin-left: 4px;
   opacity: 0.7;
   transform: ${(props) => props.active && "rotate(180deg)"};
+
+  @media only screen and (max-width: 800px) {
+    height: 14px;
+    width: 14px;
+  }
+
+  @media only screen and (max-width: 520px) {
+    height: 10px;
+    width: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--color-primary);
+    fill: var(--color-primary);
+  }
 `;
 
 const DropdownItem = ({

@@ -62,6 +62,11 @@ const StlyedGameItem = styled.div<{ color?: string }>`
   border: 1px solid #dadada;
   transition: all 0.2s linear;
 
+  @media only screen and (max-width: 1200px) {
+    height: 105px;
+    width: 205px;
+  }
+
   &:hover {
     opacity: 0.8;
     cursor: pointer;

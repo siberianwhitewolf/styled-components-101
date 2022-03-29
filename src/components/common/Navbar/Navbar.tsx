@@ -9,6 +9,15 @@ const StyledLogo = styled.img`
   height: 55px;
   width: 105px;
   object-fit: cover;
+
+  @media only screen and (max-width: 600px) {
+    width: 85px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    width: 55px;
+    object-fit: contain;
+  }
 `;
 
 const StyledLogoWrapper = styled.div`
@@ -44,6 +53,16 @@ const StyledIcon = styled.svg`
   margin-bottom: 4px;
   margin-top: 4px;
   margin-left: 4px;
+
+  @media only screen and (max-width: 670px) {
+    height: 12px;
+    width: 12px;
+  }
+
+  @media only screen and (max-width: 435px) {
+    height: 8px;
+    width: 8px;
+  }
 `;
 
 const StyledLink = styled.a`
@@ -56,6 +75,14 @@ const StyledLink = styled.a`
   color: var(--color-text);
   margin-right: 20px;
   transition: all 0.15s linear;
+
+  @media only screen and (max-width: 670px) {
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: 435px) {
+    font-size: 8px;
+  }
 
   &:hover {
     opacity: 1;

@@ -32,6 +32,14 @@ const StyledButton = styled.a<{ alt?: boolean }>`
     background-color: ${(props) => (props.alt ? "#0000008f" : "#910d08")};
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 700px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    font-size: 10px;
+  }
 `;
 
 const StyledAngle = styled.svg`
